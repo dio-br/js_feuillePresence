@@ -5,33 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
-    <h1>Presence Molengeek</h1>
-    <section class="container">
-    <div class="task">
-        <div class="input1">
-            <label for="name">prenom :</label>
-            <input type="text">
-        </div>
-        <div class="input2">
-            <label for="name">nom :</label>
-            <input type="text">
-        </div>
-        <div class="input3">
-            <label for="name">age :</label>
-            <input type="text">
-        </div>
-        <div class="input4">
-            <label for="name">classe :</label>
-            <input type="text">
-        </div>
-    </div>
-        <div class="todo-container">
-            <ul class="todo-list"></ul>
-        </div>
-    </section>
+    <header>
+
+        <section id="localStorage">
+            <h1>Feuille De Présence</h1>
+            <div class="mesBtn">
+                <button class='removeStag'>Clear Storage</button>
+                <button class='refreshStag'>Refresh Page</button>
+                <button class="modal-btn">Modal</button>
+                <button class="modal-btn1">Info</button>
+            </div>
+
+            <div class="modal-bg">
+                <div class="modal">
+                        <h2>Stagiaires</h2>
+                        <label for="Enter"></label>
+                        <input id="inpNom" type="text" placeholder="Enter name">
+                        <input id="inpAge" type="text" placeholder="Enter age">
+                        <input id="inpCoding" type="text" placeholder="Enter coding">
+                        <button type="button" class='btn-subscribe ajouteStag'>add</button>
+                        <span class="modal-close">X</span>
+                </div>
+            </div>
+            <div class="modal-bg1">
+                <div class="modal1">
+                    <p><span class="detail">Ville :</span> <span id="city"></span></p>
+                    <p><span class="detail">Pays :</span> <span id="region"></span></p>
+                    <p><span class="detail">IP :</span> <span id="ip"></span></p>
+                    <hr>
+                    <p><span id="detail">la Date d'aujoud'hui</span> <span id="date"></span></p>
+                    <p><span id="detail">L'heure :</span> <span id="heure"></span></p>
+                    <span class="modal-close1">X</span>
+                </div>
+            </div>
+            <div id="listStagiaires">
+                <h4>liste des stagiaires</h4>
+                <ul class="listStag">
+        
+                </ul>
+            </div>
+        </section>
+    </header>
     <script src="./public/js/main.js"></script>
 </body>
 </html>
